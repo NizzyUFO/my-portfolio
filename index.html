@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="logo">Nizzy</div>
+
+  <ul class="nav-links">
+
+    <!-- CLOSE BUTTON -->
+    <div class="close-btn">&times;</div>
+
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div class="menu-toggle">&#9776;</div>
+</nav>
+
+
+<section class="sect-1">
+<div class="hero">
+
+    <!-- LEFT SIDE -->
+    <div class="hero-text">
+      <h1>Hello, I'm Nice</h1>
+      <h2>I am a <span id="typing"></span></h2>
+      <p>I help brands grow online through engaging content and strategy.</p>
+
+     <a href="https://wa.me/2347031017667?text=Hello%20Nice,%20I’m%20interested%20in%20your%20social%20media%20services." 
+class="btn" target="_blank">
+Hire Me
+</a>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="hero-image">
+      <div class="circle">
+        <img src="./images/bangs.jpeg" alt="My Photo">
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="about" class="about">
+
+  <h2>About Me</h2>
+
+  <p class="about-text">
+    I help brands grow through creative content, strategic planning, and engaging visuals.
+  </p>
+
+  <div class="about-boxes">
+
+    <div class="box">
+      <h3>Content Creation</h3>
+      <p>I design engaging posts and visuals that capture attention.</p>
+    </div>
+
+    <div class="box">
+      <h3>Social Media Strategy</h3>
+      <p>I plan and manage content to grow audience and engagement.</p>
+    </div>
+
+    <div class="box">
+      <h3>Video Editing</h3>
+      <p>I create short-form videos that boost reach and interaction.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="work" class="work">
+
+  <h2 class="gradient-text">My Work</h2>
+
+  <div class="work-grid">
+
+    <div class="work-card">
+      <img src="./images/insta.png" alt="">
+      <div class="work-info">
+        <h3>Instagram Management</h3>
+        <p>Content creation and growth strategy for a brand.</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <img src="./images/flyer.jpeg" alt="">
+      <div class="work-info">
+        <h3>Business Flyer Design</h3>
+        <p>Creative promotional design for marketing.</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <img src="./images/web.png" alt="">
+      <div class="work-info">
+        <h3>Website Project</h3>
+        <p>Responsive website built for a food brand.</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="certificates">
+  <h2 class="section-title">My Certificates</h2>
+
+  <div class="cert-container">
+
+    <div class="cert-card">
+      <img src="images/cert 1.png" alt="Web Development Certificate">
+      <h3>Web Development</h3>
+      <p>HTML, CSS, JavaScript</p>
+    </div>
+
+    <div class="cert-card">
+      <img src="images/cert2.png" alt="Digital Skills Certificate">
+      <h3>Digital & Creative Skills</h3>
+      <p>Social Media Management, Mobile Photography, Video Editing</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="contact">
+
+ <h2 class="gradient-text slide-in">Let’s Work Together</h2>
+
+  <p class="contact-text">
+    Have a project in mind or want to grow your brand?  
+    Let’s talk and make it happen.
+  </p>
+
+  <a href="https://wa.me/2347031017667?text=Hello%20Nice,%20I’m%20interested%20in%20your%20services." 
+     class="btn contact-btn" target="_blank">
+    Chat on WhatsApp
+  </a>
+
+  <p class="email">
+  or email me: 
+  <a href="mailto:niceufomba2@gmail.com">niceufomba2@gmail.com</a>
+</p>
+
+</section>
+
+
+
+
+<footer class="footer">
+  <p>© 2026 Nice | All Rights Reserved</p>
+</footer>
+
+<script>
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav-links");
+const closeBtn = document.querySelector(".close-btn");
+
+/* OPEN MENU */
+menuToggle.addEventListener("click", () => {
+  nav.classList.add("active");
+});
+
+/* CLOSE MENU */
+closeBtn.addEventListener("click", () => {
+  nav.classList.remove("active");
+});
+</script>
+
+
+
+<script>
+const slideElements = document.querySelectorAll(".slide-in");
+
+function showOnScroll() {
+  slideElements.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add("show");
+    }
+  });
+}
+
+window.addEventListener("scroll", showOnScroll);
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script>
+var typed = new Typed("#typing", {
+  strings: ["Social Media Manager", "Web Developer", "Content Creator"],
+  typeSpeed: 60,
+  backSpeed: 40,
+  loop: true
+});
+</script>
+</body>
+</html>
